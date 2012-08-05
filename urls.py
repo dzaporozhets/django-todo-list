@@ -6,8 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'todo_list.views.home', name='home'),
-    # url(r'^todo_list/', include('todo_list.foo.urls')),
+    url(r'^$', 'lists.views.index'),
+    url(r'^todo_list/', 'lists.views.index'),
+    url(r'^tasks/(?P<task_id>\d+)/$', 'lists.views.detail'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
